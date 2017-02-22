@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			#earth{
+				position:absolute;
+				left:0;
+				top:0;
+				height:50px;
+				width:50px;
+			}
+			body{
+				/*鼠标隐藏属性*/
+				cursor:none;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<img id="earth" src="img/1.png">
+		<script>
+//		获取页面的宽度;
+//			var w=document.body.clientWidth;
+//		获取页面的高度
+//			var h=document.documentElement.clientHeight;
+			var oEarth=document.getElementById("earth");
+			document.onmousemove=function(e){
+				var x=e.clientX-25;
+				var y=e.clientY-25;
+				oEarth.style.left=x+"px";
+				oEarth.style.top=y+"px";
+			}
+		</script>
+	</body>
+</html>
